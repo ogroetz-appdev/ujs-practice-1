@@ -20,3 +20,5 @@ after adding devise to gemfile:
 
 rails g devise user
 rails db:migrate
+
+rails g scaffold task
