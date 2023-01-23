@@ -32,3 +32,10 @@ add gem "annotate" to gem file
  and then run the command : 
  - bundle exec annotate --models --exclude fixtures
 bin/setup
+
+update an annotate rake file in lib/tasks
+
+add gem "faker" to gemfile
+run bundle install
+  - add dev.rake file to lib/tasks
+
