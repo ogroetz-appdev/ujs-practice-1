@@ -39,3 +39,4 @@ add gem "faker" to gemfile
 run bundle install
   - add dev.rake file to lib/tasks
 
+run:    rails dev:prime
