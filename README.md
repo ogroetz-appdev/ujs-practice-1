@@ -19,6 +19,16 @@ after adding devise to gemfile:
   rails g devise:install
 
 rails g devise user
+  - update fields
 rails db:migrate
 
 rails g scaffold task
+  - update fields
+rails db:migrate
+
+add gem "annotate" to gem file
+*** it was better for me to run the command on the cli: 
+ - gem install annotate
+ and then run the command : 
+ - bundle exec annotate --models --exclude fixtures
+bin/setup
