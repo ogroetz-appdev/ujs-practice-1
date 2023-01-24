@@ -30,14 +30,6 @@ class TasksController < ApplicationController
     @task = Task.new
   end
 
-  # GET /tasks/1/edit
-  def edit
-    respond_to do |format|
-      format.html
-      format.js
-    end
-  end
-
   # POST /tasks or /tasks.json
   def create
     @task = Task.new(task_params)
@@ -53,15 +45,25 @@ class TasksController < ApplicationController
     end
   end
 
+  # GET /tasks/1/edit
+  def edit
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
   # PATCH/PUT /tasks/1 or /tasks/1.json
   def update
     respond_to do |format|
       if @task.update(task_params)
         format.html { redirect_to task_url(@task), notice: "Task was successfully updated." }
         format.json { render :show, status: :ok, location: @task }
+        format.js
       else
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @task.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end
